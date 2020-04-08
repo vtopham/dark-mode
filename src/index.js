@@ -10,7 +10,7 @@ import "./styles.scss";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [darkMode, setDarkMode] = useDarkMode(false);
+  // const [darkMode, setDarkMode] = useDarkMode(false);
 
   useEffect(() => {
     axios
@@ -21,9 +21,7 @@ const App = () => {
       .catch(err => console.log(err));
   }, []);
 
-  useEffect(() => { //if darkMode is true, add class
-    document.getElementsByTagName("body")[0].classList.toggle("dark-mode",darkMode)
-  },[]);
+  
 
   return (
     <div className="App">
